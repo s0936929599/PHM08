@@ -35,8 +35,8 @@ end=data.copy()
 end.iloc[:,2:26]=data1
 ###create 2d data
 np.array(end)[:40000,2:]
-train_X, train_y = np.array(end)[:40000,2:], data.values[:40000,-1] #ctun 2016
-test_X, test_y = np.array(end)[40000:,2:], data.values[40000:,-1]
+train_X, train_y = np.array(end)[:40000,2:-1], data.values[:40000,-1] #ctun 2016
+test_X, test_y = np.array(end)[40000:,2:-1], data.values[40000:,-1]
 ###reshape to lstm format
 train_X = train_X.reshape((train_X.shape[0],1,train_X.shape[1]))
 test_X = test_X.reshape((test_X.shape[0],1,test_X.shape[1]))
