@@ -35,7 +35,7 @@ class raw_data_transform:
     def yield_engines(self):
         for i in range(1,self.engine):
             print('現在是第',i,'個engine\n')
-            engines.append(data[data['id']==i])
+            engines.append(end[end['id']==i])
     ###calcuate RUL        
     def auto_RUL(self):
         for j in range(len(engines)):
